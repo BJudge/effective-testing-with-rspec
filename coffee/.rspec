@@ -1,0 +1,4 @@
+--require spec_helper
+-fd
+--format html
+--out rspec_results.html
