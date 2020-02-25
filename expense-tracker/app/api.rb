@@ -19,8 +19,11 @@ module ExpenseTracker
         JSON.generate('error' => result.error_message)
       end
     end
+
     get '/expenses/:date' do
-      JSON.generate([ ])
+      JSON.generate(@ledger.expenses_on(params[:date]))
     end
+
   end
+  
 end
